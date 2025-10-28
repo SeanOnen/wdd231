@@ -43,8 +43,8 @@ header {
 
 .logo-name img {
     object-fit: contain; /* No distortion */
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5)); /* Unified dark shadow for contrast */
-    -webkit-filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5)); /* Safari */
+    filter: drop-shadow(2px 2px 4px rgba(245, 243, 243, 0.817)); /* Unified dark shadow for contrast */
+    -webkit-filter: drop-shadow(2px 2px 4px rgb(244, 244, 244)); /* Safari */
     display: block !important; /* Visible */
     visibility: visible;
     opacity: 1;
