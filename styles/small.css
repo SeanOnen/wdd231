@@ -199,14 +199,14 @@ img {
 }
 
 .filter-btn {
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 0.75rem;
     background: var(--secondary-color);
     border: 2px solid var(--primary-color);
     border-radius: 25px; /* Rounded rectangular */
     cursor: pointer;
     transition: background 0.3s;
     font-weight: bold;
-    width: 100px; /* Uniform width */
+    width: 320px; /* Uniform width */
     display: block;
     min-height: 44px; /* Mobile touch target */
     touch-action: manipulation;
@@ -220,7 +220,7 @@ img {
 
 .course-slot {
     min-height: 100px; /* Space for card */
-    width: 100%;
+    width: 200%;
     margin-top: 0.5rem;
     transition: opacity 0.3s; /* Smooth show/hide */
 }
