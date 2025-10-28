@@ -22,7 +22,7 @@
     .nav-list {
         flex-direction: row !important; /* Override to horizontal row */
         justify-content: flex-start; /* Left-aligned side-by-side */
-        gap: 3rem; /* Increased gap for clear separation */
+        gap: 3rem; /* Gap for clear separation */
         padding: 1rem 2rem; /* Padding for breathing room */
         align-items: center; /* Vertical center if needed */
     }

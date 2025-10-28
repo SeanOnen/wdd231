@@ -364,14 +364,6 @@ img {
     display: inline !important; /* Show fallback if no img */
 }
 
-/* Projects */
-.projects ul {
-    list-style: none;
-    padding: 0;
-    visibility: visible;
-    opacity: 1;
-}
-
 /* Footer - Visible */
 footer {
     background: var(--primary-color);
