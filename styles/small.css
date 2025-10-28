@@ -1,9 +1,9 @@
 /* CSS Variables for color scheme */
 :root {
     --primary-color: #2c5aa0; /* Blue */
-    --secondary-color: #a8d5ba; /* Green */
+    --secondary-color: #e5f7ec; /* Green */
     --accent-color: #f4f4f4; /* Light gray */
-    --text-color: #333;
+    --text-color: #000000;
     --font-family: 'Roboto', sans-serif;
 }
 
