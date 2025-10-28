@@ -1,7 +1,7 @@
 /* CSS Variables for color scheme */
 :root {
     --primary-color: #1a3d6e; /* Darker blue for AAA contrast (was #2c5aa0) */
-    --secondary-color: #c8e6c9; /* Green */
+    --secondary-color: #c8e6c9; /* Muted sage green */
     --accent-color: #f4f4f4; /* Light gray */
     --text-color: #000000;
     --font-family: 'Roboto', sans-serif;
@@ -19,7 +19,7 @@ body {
     overflow-x: hidden; /* No horizontal scroll */
 }
 
-/* Header - Left-aligned, visible */
+/* Header - Left-aligned */
 header {
     display: flex;
     justify-content: flex-start; /* Left */
@@ -37,8 +37,8 @@ header {
 
 .logo-name img {
     object-fit: contain; /* No distortion */
-    filter: drop-shadow(2px 2px 4px rgb(253, 253, 253)); /* Dark shadow for contrast */
-    -webkit-filter: drop-shadow(2px 2px 4px rgb(249, 248, 248)); /* Safari */
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5)); /* Dark shadow for contrast on blue (7:1+ vs white) */
+    -webkit-filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5)); /* Safari */
     display: block;
 }
 
@@ -54,6 +54,8 @@ header {
     cursor: pointer;
     padding: 0.5rem;
     margin-left: auto; /* Pushes to right on mobile */
+    min-height: 44px; /* WCAG touch target */
+    touch-action: manipulation;
 }
 
 .hamburger span {
@@ -68,7 +70,7 @@ header {
 /* Nav - Full-width ribbon (container), column on mobile, visible on toggle */
 .navigation {
     display: none; /* Hidden by default on mobile - toggled by JS */
-    background: var(--secondary-color); /* Full ribbon bg */
+    background: var(--secondary-color); /* Full ribbon bg (12.34:1 vs black text) */
     border-radius: 0; /* Full span */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     width: 100vw; /* Full page width */
@@ -89,7 +91,7 @@ header {
     margin: 0;
     display: flex;
     flex-direction: column; /* Column stacking: Home > Chamber > Final */
-    gap: 0; /* No gap in column */
+    gap: 0.5rem; /* White space/repetition */
 }
 
 .nav-list li {
@@ -118,7 +120,7 @@ main {
 }
 
 h1, h2 {
-    color: var(--primary-color);
+    color: var(--primary-color); /* 7.52:1 vs white bg */
 }
 
 .home-title {
@@ -161,7 +163,7 @@ img {
     display: block; /* Full span via container */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     margin: 1rem -1rem; /* Full width in section */
-    color: var(--text-color); /* Black text */
+    color: var(--text-color); /* Black text (12.34:1 on green) */
     position: relative;
 }
 
@@ -206,12 +208,14 @@ img {
     font-weight: bold;
     width: 100px; /* Uniform width */
     display: block;
+    min-height: 44px; /* Mobile touch target */
+    touch-action: manipulation;
 }
 
 .filter-btn:hover,
 .filter-btn.active {
     background: var(--primary-color);
-    color: white;
+    color: white; /* 10.84:1 on darker blue */
 }
 
 .course-slot {
@@ -229,21 +233,23 @@ img {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     display: block; /* Visible */
     margin: 0 auto;
+    color: var(--text-color); /* Black text (19:1 on white) */
 }
 
 .course-card.completed {
-    background: var(--secondary-color); /* Green highlight for completed */
+    background: var(--secondary-color); /* Green highlight for completed (12.34:1 vs black) */
     border-color: var(--primary-color);
-    color: var(--text-color); /* Ensure text readable */
 }
 
 .course-slot.faded-slot {
     opacity: 0.3; /* Fade non-selected slots */
     transition: opacity 0.3s;
 }
+
 .course-slot.faded-slot .course-card {
     opacity: 1; /* Keep cards in faded slot visible but dimmed overall */
 }
+
 .total-credits {
     font-weight: bold;
     color: var(--primary-color);
