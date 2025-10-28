@@ -232,10 +232,18 @@ img {
 }
 
 .course-card.completed {
-    background: var(--secondary-color);
+    background: var(--secondary-color); /* Green highlight for completed */
     border-color: var(--primary-color);
+    color: var(--text-color); /* Ensure text readable */
 }
 
+.course-slot.faded-slot {
+    opacity: 0.3; /* Fade non-selected slots */
+    transition: opacity 0.3s;
+}
+.course-slot.faded-slot .course-card {
+    opacity: 1; /* Keep cards in faded slot visible but dimmed overall */
+}
 .total-credits {
     font-weight: bold;
     color: var(--primary-color);
