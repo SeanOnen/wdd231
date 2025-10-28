@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onen Sean Thomas Ongaya - WDD 231: Web Development</title>
+    <meta name="description" content="Home page for WDD 231 course projects and portfolio.">
+    <meta name="author" content="Onen Sean Thomas Ongaya">
+    <!-- Google Fonts: One family (Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- CSS: Normalize first, then small, then larger -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <!-- JS: Defer for non-blocking load -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-name">
+            <img src="images/logo.png" alt="Onen Sean Thomas Ongaya Site Logo" width="80" height="80">
+            <!-- Optimize <125KB -->
+            <span class="site-title">Onen Sean Thomas Ongaya</span>
+        </div>
+        <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+            <span></span><span></span><span></span> <!-- 3 lines for icon -->
+        </button>
+    </header>
+
+    <nav class="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="./chamber/index.html">Chamber Project</a></li>
+            <li><a href="./final/index.html">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1 class="home-title">Home</h1> <!-- Left-aligned -->
+
+        <section class="intro-wrapper"> <!-- About Me first, then Photo -->
+            <section class="about-me">
+                <h2>About Me</h2>
+                <p>My name is Onen Sean Thomas Ongaya and I usually go by Sean. I was born and live in Uganda with my
+                    family. I am currently part of a trainee program at a beverage company, an experience that I greatly
+                    enjoy. I love traveling and getting new perspectives.</p>
+                <!-- Add more paragraphs as needed -->
+            </section>
+            <section class="student-photo">
+                <h2>Student Photo</h2>
+                <img src="images/student-photo.jpg" alt="Photo of Onen Sean Thomas Ongaya" width="300" height="400">
+                <!-- Optimize <125KB -->
+            </section>
+        </section>
+
+        <section class="certificate">
+            <h2 class="certificate-title">Web Certificate Courses</h2>
+            <div class="filter-wrapper">
+                <div class="filter-item">
+                    <button data-filter="all" class="filter-btn">All</button>
+                    <div class="course-slot" id="all-slot"></div>
+                </div>
+                <div class="filter-item">
+                    <button data-filter="cse" class="filter-btn">CSE</button>
+                    <div class="course-slot" id="cse-slot"></div>
+                </div>
+                <div class="filter-item">
+                    <button data-filter="wdd" class="filter-btn">WDD</button>
+                    <div class="course-slot" id="wdd-slot"></div>
+                </div>
+            </div>
+            <p class="total-credits" id="totalCredits">The Total Credits for the Courses Listed Above is 6</p>
+        </section>
+
+        <!-- Social icons: Visible, centered below certificate -->
+        <section class="social-section">
+            <div class="social-links">
+                <a href="https://github.com/seanonen/wdd231" aria-label="GitHub">
+                    <img src="images/github.png" alt="GitHub Icon" width="32" height="32">
+                    <span class="icon-fallback">GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/sean-thomas-ongaya-onen" aria-label="LinkedIn">
+                    <img src="images/linkedin.png" alt="LinkedIn Icon" width="32" height="32">
+                    <span class="icon-fallback">LinkedIn</span>
+                </a>
+                <a href="https://instagram.com/sean_onen" aria-label="Instagram">
+                    <img src="images/instagram.png" alt="Instagram Icon" width="32" height="32">
+                    <span class="icon-fallback">Instagram</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">&copy; <span id="currentYear"></span> 💨 Onen Sean Thomas Ongaya 💨 Kampala, Uganda</p>
+            <p id="lastModified">Last Updated: </p>
+        </div>
+    </footer>
+</body>
+
+</html>

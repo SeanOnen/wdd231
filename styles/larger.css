@@ -1,0 +1,115 @@
+@media screen and (min-width: 600px) {
+    /* Header: Left-aligned */
+    header {
+        justify-content: flex-start;
+        padding: 1.5rem 2rem;
+    }
+
+    .logo-name {
+        gap: 1rem;
+    }
+
+    .hamburger {
+        display: none !important; /* Force hide on desktop */
+    }
+
+    /* Nav: Force row (side-by-side) on desktop */
+    .navigation {
+        display: block !important; /* Always show on desktop */
+        background: var(--secondary-color) !important; /* Visual indicator: Green ribbon */
+    }
+
+    .nav-list {
+        flex-direction: row !important; /* Override to horizontal row */
+        justify-content: flex-start; /* Left-aligned side-by-side */
+        gap: 3rem; /* Increased gap for clear separation */
+        padding: 1rem 2rem; /* Padding for breathing room */
+        align-items: center; /* Vertical center if needed */
+    }
+
+    .nav-list li {
+        border-bottom: none; /* No borders in row */
+        border-right: 1px solid var(--accent-color); /* Optional: Vertical separator */
+    }
+
+    .nav-list li:last-child {
+        border-right: none; /* No right border on last li */
+    }
+
+    .nav-list a {
+        padding: 1rem 1.5rem; /* Comfortable padding per link */
+        margin: 0; /* No extra margins */
+        white-space: nowrap; /* Keep text inline */
+    }
+
+    /* Certificate: Force row layout for filters on desktop */
+    .filter-wrapper {
+        flex-direction: row !important; /* Override to horizontal row */
+        justify-content: space-evenly; /* Evenly spaced across */
+        gap: 2rem; /* Wider gap */
+    }
+
+    .filter-item {
+        flex: 1; /* Equal width in row */
+        max-width: 150px; /* Cap width per item */
+        width: auto; /* Allow natural sizing */
+    }
+
+    /* Home Title: Left-aligned */
+    .home-title {
+        text-align: left;
+    }
+
+    /* Certificate Title: Full-width ribbon */
+    .certificate-title {
+        margin: 1rem -2rem; /* Full span */
+    }
+
+    /* Intro: Side-by-side, About Me left/wider */
+    .intro-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* About 2/3 left, Photo 1/3 right */
+        gap: 2rem;
+    }
+
+    .about-me,
+    .student-photo {
+        padding: 1rem;
+    }
+
+    /* Social: Wider gap */
+    .social-links {
+        gap: 3rem;
+    }
+
+    /* Footer: Centered stack */
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Larger screens */
+@media screen and (min-width: 900px) {
+    main {
+        padding: 2rem;
+    }
+
+    .nav-list {
+        gap: 4rem; /* Even more space on very wide screens */
+    }
+
+    /* Nav full-width on large */
+    .navigation {
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        border-radius: 0;
+    }
+
+    .filter-wrapper {
+        gap: 3rem; /* Wider on large desktop */
+    }
+}
