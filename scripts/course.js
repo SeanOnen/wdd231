@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
         wdd: document.getElementById('wdd-slot')
     };
 
+    // Detect desktop (min-width: 600px)
+    let isDesktop = window.matchMedia('(min-width: 600px)').matches;
+    window.matchMedia('(min-width: 600px)').addListener(mq => isDesktop = mq.matches); // Listen for resize
+
     function renderToSlot(slotId) {
         const slot = slots[slotId];
         if (slot) {
@@ -36,12 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function fadeOtherSlots(activeSlotId) {
+    function toggleOtherSlots(activeSlotId) {
         Object.keys(slots).forEach(slotId => {
             if (slotId === activeSlotId) {
-                slots[slotId].classList.remove('faded-slot');
+                slots[slotId].classList.remove('faded-slot', 'hidden-slot');
+                slots[slotId].style.display = 'block'; // Show active
             } else {
-                slots[slotId].classList.add('faded-slot');
+                if (isDesktop) {
+                    // Desktop: Fade
+                    slots[slotId].classList.add('faded-slot');
+                    slots[slotId].classList.remove('hidden-slot');
+                    slots[slotId].style.display = 'block'; // Keep visible but faded
+                } else {
+                    // Mobile: Hide
+                    slots[slotId].classList.add('hidden-slot');
+                    slots[slotId].classList.remove('faded-slot');
+                    slots[slotId].style.display = 'none'; // Full hide
+                }
             }
         });
     }
@@ -67,10 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const filter = btn.dataset.filter;
             renderToSlot(filter);
-            fadeOtherSlots(filter);
+            toggleOtherSlots(filter);
             updateCredits(filter);
         });
     });
 
-    // Initial: Empty slots; user clicks to show
+    // Initial: Show "ALL" (render all courses, fade/hide others, full total)
+    document.querySelector('[data-filter="all"]').click();
 });
