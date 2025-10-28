@@ -1,7 +1,7 @@
 /* CSS Variables for color scheme */
 :root {
     --primary-color: #1a3d6e; /* Darker blue for AAA contrast (was #2c5aa0) */
-    --secondary-color: #e5f7ec; /* Green */
+    --secondary-color: #c8e6c9; /* Green */
     --accent-color: #f4f4f4; /* Light gray */
     --text-color: #000000;
     --font-family: 'Roboto', sans-serif;
