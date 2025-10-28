@@ -1,4 +1,3 @@
-/* CSS Variables for color scheme */
 :root {
     --primary-color: #1a3d6e; /* Darker blue for AAA contrast (was #2c5aa0) */
     --secondary-color: #c8e6c9; /* Muted sage green */
@@ -206,7 +205,7 @@ img {
     cursor: pointer;
     transition: background 0.3s;
     font-weight: bold;
-    width: 320px; /* Uniform width */
+    width: 150px; /* Uniform width */
     display: block;
     min-height: 44px; /* Mobile touch target */
     touch-action: manipulation;
@@ -220,7 +219,7 @@ img {
 
 .course-slot {
     min-height: 100px; /* Space for card */
-    width: 200%;
+    width: 120%;
     margin-top: 0.5rem;
     transition: opacity 0.3s; /* Smooth show/hide */
 }
