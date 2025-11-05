@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Kampala Coffee Roasters",
+    "address": "Plot 12, Nakasero Road, Kampala",
+    "phone": "+256 414 123456",
+    "website": "https://kampalacoffee.com",
+    "image": "images/coffee-roasters.jpg",
+    "membershipLevel": 3,
+    "category": "Food & Beverage",
+    "description": "Premium coffee sourcing and roasting for local cafes."
+  },
+  {
+    "name": "Uganda Tech Solutions Ltd",
+    "address": "Kampala Industrial Area, Block A",
+    "phone": "+256 700 987654",
+    "website": "https://ugandatech.co.ug",
+    "image": "images/tech-solutions.jpg",
+    "membershipLevel": 2,
+    "category": "Technology",
+    "description": "IT consulting and software development services."
+  },
+  {
+    "name": "Pearl of Africa Tours",
+    "address": "20 Entebbe Road, Kampala",
+    "phone": "+256 772 456789",
+    "website": "https://pearlafricatours.com",
+    "image": "images/tours.png",
+    "membershipLevel": 1,
+    "category": "Tourism",
+    "description": "Guided tours of Uganda's wildlife and cultural sites."
+  },
+  {
+    "name": "Kampala Fabric Emporium",
+    "address": "Owino Market, Kampala Central",
+    "phone": "+256 414 789012",
+    "website": "https://kampala-fabric.com",
+    "image": "images/fabric-emporium.jpg",
+    "membershipLevel": 3,
+    "category": "Retail",
+    "description": "High-quality fabrics and tailoring supplies."
+  },
+  {
+    "name": "EcoGreen Recycling Co.",
+    "address": "Nakawa Industrial Park",
+    "phone": "+256 701 234567",
+    "website": "https://ecogreenrecycling.ug",
+    "image": "images/recycling.jpg",
+    "membershipLevel": 2,
+    "category": "Environmental Services",
+    "description": "Sustainable waste management and recycling solutions."
+  },
+  {
+    "name": "Kampala Digital Marketing Agency",
+    "address": "Colville Street, Kampala",
+    "phone": "+256 414 345678",
+    "website": "https://kampaladigital.com",
+    "image": "images/digital-agency.jpeg",
+    "membershipLevel": 1,
+    "category": "Marketing",
+    "description": "SEO, social media, and digital advertising services."
+  },
+  {
+    "name": "Uganda Artisan Crafts",
+    "address": "Kisementi, Kampala",
+    "phone": "+256 772 890123",
+    "website": "https://ugandacrafts.org",
+    "image": "images/artisan-crafts.png",
+    "membershipLevel": 3,
+    "category": "Arts & Crafts",
+    "description": "Handmade crafts supporting local artisans."
+  }
+]
