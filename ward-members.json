@@ -1,0 +1,55 @@
+{
+  "families": [
+    {
+      "familyName": "Smith Family",
+      "moveInDate": "2023-10-01",
+      "familySize": 4,
+      "visitedByBishopric": true,
+      "members": [
+        {
+          "name": "John Smith",
+          "gender": "male",
+          "birthdate": "1985-05-15"
+        },
+        {
+          "name": "Jane Smith",
+          "gender": "female",
+          "birthdate": "1987-08-22"
+        },
+        {
+          "name": "Emma Smith",
+          "gender": "female",
+          "birthdate": "2015-03-10"
+        },
+        {
+          "name": "Michael Smith",
+          "gender": "male",
+          "birthdate": "2018-11-30"
+        }
+      ]
+    },
+    {
+      "familyName": "Johnson Family",
+      "moveInDate": "2023-11-15",
+      "familySize": 3,
+      "visitedByBishopric": false,
+      "members": [
+        {
+          "name": "Robert Johnson",
+          "gender": "male",
+          "birthdate": "1990-12-05"
+        },
+        {
+          "name": "Lisa Johnson",
+          "gender": "female",
+          "birthdate": "1992-02-14"
+        },
+        {
+          "name": "Sophia Johnson",
+          "gender": "female",
+          "birthdate": "2020-07-20"
+        }
+      ]
+    }
+  ]
+}
