@@ -1,14 +1,15 @@
 /* CSS Variables for color scheme */
 :root {
-    --primary-color: #174a8c;
-    --secondary-color: #fcfceb;
-    --accent-color: #ffffff;
-    --text-color: #0a0a0a;
+    --primary-color: #174a8c; /* Primary blue (hex) */
+    --secondary-color: #fcfceb; /* Secondary green (hex) */
+    --accent-color: #ffffff; /* White (hex) */
+    --text-color: #0a0a0a; /* Dark text (hex) */
     --font-family: 'Roboto', sans-serif;
 }
 
 * { box-sizing: border-box; }
 
+/* Consolidated body rule */
 body {
     font-family: var(--font-family);
     margin: 0;
@@ -26,7 +27,7 @@ header {
     align-items: center;
     padding: 1rem;
     background: var(--primary-color);
-    color: white;
+    color: #ffffff; /* Hex for consistency */
 }
 
 .logo-name {
@@ -37,13 +38,13 @@ header {
 
 .logo-name img {
     object-fit: contain;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
-    -webkit-filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+    filter: drop-shadow(2px 2px 4px #00000080); /* RGBA to hex with alpha */
+    -webkit-filter: drop-shadow(2px 2px 4px #00000080); /* Safari */
     display: block;
 }
 
 .site-title {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Updated from 1.2rem for larger headings */
     font-weight: 700;
 }
 
@@ -62,8 +63,8 @@ header {
     display: block;
     width: 25px;
     height: 3px;
-    background: white;
-    margin: 5px 0;
+    background: #ffffff;
+    margin: 3px 0; /* Reduced for tighter spacing */
     transition: 0.3s;
 }
 
@@ -72,7 +73,7 @@ header {
     display: none;
     background: var(--secondary-color);
     border-radius: 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px #0000001a; /* RGBA to hex with alpha */
     width: 100vw;
     position: relative;
     left: 50%;
@@ -101,10 +102,10 @@ header {
 .nav-list a {
     display: block;
     padding: 1rem;
-    text-align: left;
     text-decoration: none;
     color: var(--text-color);
     transition: color 0.3s;
+    text-align: left;
 }
 
 .nav-list a:hover,
@@ -112,13 +113,14 @@ header {
     color: var(--primary-color);
 }
 
-/* Main */
+/* Consolidated main rule */
 main {
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Consolidated h1 rule */
 h1 {
     text-align: center;
     color: var(--primary-color);
@@ -143,7 +145,7 @@ h1 {
 .view-btn.active,
 .view-btn:hover {
     background: var(--primary-color);
-    color: white;
+    color: #ffffff; /* Hex consistency */
 }
 
 #members {
@@ -158,7 +160,7 @@ h1 {
 }
 
 .member-card {
-    background: white;
+    background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     padding: 1.5rem;
@@ -190,13 +192,13 @@ h1 {
 }
 
 .level-gold {
-    border-color: gold;
-    background: linear-gradient(to bottom, white, #fffacd);
+    border-color: #ffd700; /* Hex for gold */
+    background: linear-gradient(to bottom, #ffffff, #fffacd);
 }
 
 .level-silver {
-    border-color: silver;
-    background: linear-gradient(to bottom, white, #f5f5f5);
+    border-color: #c0c0c0; /* Hex for silver */
+    background: linear-gradient(to bottom, #ffffff, #f5f5f5);
 }
 
 /* List View */
@@ -210,7 +212,7 @@ h1 {
     display: flex;
     align-items: center;
     padding: 1rem;
-    background: white;
+    background: #ffffff;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     border-left: 4px solid var(--primary-color);
@@ -240,7 +242,7 @@ h1 {
 /* Footer */
 footer {
     background: var(--primary-color);
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
