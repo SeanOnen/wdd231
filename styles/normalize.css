@@ -1,4 +1,4 @@
-/*! Modern Normalize (based on normalize.css v8.0.1, cleaned 2025) | MIT License */
+/*! Modern Normalize (consolidated for 2025) | MIT License */
 
 /* Document
    ========================================================================== */
@@ -12,13 +12,16 @@ html {
   text-size-adjust: 100%; /* 2 */
 }
 
-/* Sections
-   ========================================================================== */
-
+/**
+ * Base page setup
+ */
 body {
   margin: 0;
 }
 
+/**
+ * Consistent rendering of main, headings, and typography
+ */
 main {
   display: block;
 }
@@ -26,6 +29,15 @@ main {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+}
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline dotted;
 }
 
 /* Grouping content
@@ -47,11 +59,6 @@ pre {
 
 a {
   background-color: transparent;
-}
-
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline dotted;
 }
 
 b,
