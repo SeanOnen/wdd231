@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kampala Chamber of Commerce | Home</title>
+
+    <meta name="description"
+        content="Kampala Chamber of Commerce - Connecting businesses, supporting growth, and strengthening our community." />
+    <meta name="author" content="Onen Sean Thomas Ongaya">
+
+    <link rel="icon" href="../favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="styles/chamber.css" />
+
+    <script src="scripts/chamber.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-name">
+            <img src="images/logo.jpg" alt="Kampala Chamber of Commerce Logo">
+            <span class="site-title">Kampala Chamber of Commerce</span>
+        </div>
+        <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <nav class="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Kampala city skyline">
+            <div class="hero-text">
+                <h1 id="welcome-title">Welcome to the Kampala Chamber of Commerce</h1>
+                <p>Supporting business growth, partnerships, and community development.</p>
+                <a class="cta-btn" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- EVENTS -->
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li><strong>Feb 22:</strong> Business Networking Breakfast – Serena Hotel</li>
+                <li><strong>Mar 03:</strong> Kampala Start-Up Expo – UMA Grounds</li>
+                <li><strong>Mar 14:</strong> Digital Marketing Workshop – Innovation Hub</li>
+            </ul>
+        </section>
+
+        <!-- WEATHER -->
+        <section class="weather">
+            <h2>Local Weather — Kampala</h2>
+            <p><strong>Temperature:</strong> <span id="current-temp"></span></p>
+            <p><strong>Conditions:</strong> <span id="current-desc"></span></p>
+
+            <h3>3-Day Forecast</h3>
+            <div id="forecast" class="forecast-grid"></div>
+        </section>
+
+        <!-- SPOTLIGHTS -->
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlights" class="spotlight-container"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> Onen Sean Thomas Ongaya | WDD 231 | Kampala, Uganda</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
