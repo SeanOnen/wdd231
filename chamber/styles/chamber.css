@@ -293,3 +293,82 @@ footer {
   padding: 1rem;
   text-align: center;
 }
+
+/* Join page layout */
+.join-container {
+    display: grid;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.join-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+input, select, textarea {
+    padding: .6rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+input[type="submit"] {
+    background: #0055ff;
+    color: white;
+    padding: .8rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 6px;
+}
+
+.membership-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0002;
+    animation: pop-in 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes pop-in {
+    from { transform: translateY(20px); opacity: 0;}
+    to { transform: translateY(0); opacity: 1;}
+}
+
+/* MODALS */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: #0007;
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 1.5rem;
+}

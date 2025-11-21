@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber | Kampala Chamber of Commerce</title>
+
+    <link rel="stylesheet" href="styles/chamber.css">
+    <script defer src="scripts/join.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-name">
+            <img src="images/logo.jpg" alt="Kampala Chamber of Commerce Logo">
+            <span class="site-title">Kampala Chamber of Commerce</span>
+        </div>
+        <button class="hamburger" aria-label="Toggle Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <nav class="navigation">
+        <ul class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html" class="active">Join</a></li>
+        </ul>
+    </nav>
+
+    <main class="join-container">
+
+        <section class="join-form-section">
+            <h1>Membership Application</h1>
+            <p>Fill out the form below to apply for membership.</p>
+
+            <form method="get" action="thankyou.html">
+
+                <label>
+                    First Name
+                    <input type="text" name="fname" autocomplete="given-name" required title="Enter your first name">
+                </label>
+
+                <label>
+                    Last Name
+                    <input type="text" name="lname" autocomplete="family-name" required title="Enter your last name">
+                </label>
+
+                <label>
+                    Organizational Title
+                    <input type="text" name="title" autocomplete="organization-title"
+                           pattern="[A-Za-z\s\-]{7,}"
+                           title="Only letters, spaces, and hyphens — minimum 7 characters">
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" name="email" autocomplete="email" required
+                           placeholder="example@domain.com" title="Enter a valid email">
+                </label>
+
+                <label>
+                    Mobile Phone
+                    <input type="tel" name="phone" autocomplete="tel" required title="Enter your mobile number">
+                </label>
+
+                <label>
+                    Organization
+                    <input type="text" name="org" autocomplete="organization" required
+                           title="Enter your organization name">
+                </label>
+
+                <label>
+                    Membership Level
+                    <select name="membership" required title="Select membership level">
+                        <option value="">Select level...</option>
+                        <option value="np">NP Membership (Non-Profit)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>
+                    Business Description
+                    <textarea name="description" title="Organization description"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <input type="submit" value="Submit Application">
+
+            </form>
+        </section>
+
+        <!-- Membership Cards -->
+        <section class="membership-cards">
+
+            <div class="card fade-in" id="np-card">
+                <h3>NP Membership</h3>
+                <p>Perfect for non-profit organizations.</p>
+                <a href="#" data-modal="np-modal">More Info</a>
+            </div>
+
+            <div class="card fade-in" id="bronze-card">
+                <h3>Bronze Membership</h3>
+                <p>Start building your business presence.</p>
+                <a href="#" data-modal="bronze-modal">More Info</a>
+            </div>
+
+            <div class="card fade-in" id="silver-card">
+                <h3>Silver Membership</h3>
+                <p>Grow with added visibility.</p>
+                <a href="#" data-modal="silver-modal">More Info</a>
+            </div>
+
+            <div class="card fade-in" id="gold-card">
+                <h3>Gold Membership</h3>
+                <p>Premium benefits for top-tier members.</p>
+                <a href="#" data-modal="gold-modal">More Info</a>
+            </div>
+
+        </section>
+
+        <!-- Modals -->
+        <div class="modal" id="np-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>NP Membership Benefits</h2>
+                <ul>
+                    <li>No membership fee</li>
+                    <li>Access to community events</li>
+                    <li>Networking opportunities</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal" id="bronze-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <ul>
+                    <li>Basic event access</li>
+                    <li>Business listing in directory</li>
+                    <li>Affordable entry-level membership</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal" id="silver-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <ul>
+                    <li>All Bronze benefits</li>
+                    <li>Spotlight advertising</li>
+                    <li>Event discounts</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal" id="gold-modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <ul>
+                    <li>All Silver Benefits</li>
+                    <li>Premium advertising placement</li>
+                    <li>VIP event access</li>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Kampala Chamber of Commerce</p>
+    </footer>
+</body>
+
+</html>
