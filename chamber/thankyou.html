@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Kampala Chamber of Commerce</title>
-    <link rel="stylesheet" href="styles/chamber.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You | Kampala Chamber of Commerce</title>
+  <meta name="description" content="Thank you for applying to the Kampala Chamber of Commerce. Your submission has been received.">
+  <meta name="author" content="Onen Sean Thomas Ongaya">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/chamber.css">
+  <link rel="stylesheet" href="styles/join.css">
+
+  <script src="scripts/thankyou.js" defer></script>
 </head>
-
 <body>
-
-<header>
+  <header>
     <div class="logo-name">
-        <img src="images/logo.jpg" alt="Logo">
-        <span class="site-title">Kampala Chamber of Commerce</span>
+      <img src="images/logo.jpg" alt="Kampala Chamber of Commerce Logo">
+      <span class="site-title">Kampala Chamber of Commerce</span>
     </div>
-</header>
+  </header>
 
-<main class="thankyou-container">
-    <h1>Thank You for Applying!</h1>
-    <p>Your submission has been received.</p>
+  <nav class="navigation" aria-label="Main Navigation">
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
 
-    <section class="results">
-        <h2>Submitted Information</h2>
+  <main>
+    <section class="thankyou">
+      <h1>Thank You for Applying!</h1>
+      <p>Your submission has been received. Below is a summary of the required information you provided.</p>
 
-        <p><strong>First Name:</strong> <span id="fname"></span></p>
-        <p><strong>Last Name:</strong> <span id="lname"></span></p>
-        <p><strong>Email:</strong> <span id="email"></span></p>
-        <p><strong>Mobile Number:</strong> <span id="phone"></span></p>
-        <p><strong>Organization:</strong> <span id="organization"></span></p>
-        <p><strong>Form Timestamp:</strong> <span id="timestamp"></span></p>
+      <div class="submission-summary">
+        <p><strong>First Name:</strong> <span id="out-fname"></span></p>
+        <p><strong>Last Name:</strong> <span id="out-lname"></span></p>
+        <p><strong>Email:</strong> <span id="out-email"></span></p>
+        <p><strong>Mobile Number:</strong> <span id="out-phone"></span></p>
+        <p><strong>Organization:</strong> <span id="out-org"></span></p>
+        <p><strong>Form Timestamp:</strong> <span id="out-timestamp"></span></p>
+      </div>
     </section>
-</main>
+  </main>
 
-<script>
-    const params = new URLSearchParams(window.location.search);
-
-    document.getElementById("fname").textContent = params.get("fname");
-    document.getElementById("lname").textContent = params.get("lname");
-    document.getElementById("email").textContent = params.get("email");
-    document.getElementById("phone").textContent = params.get("phone");
-    document.getElementById("organization").textContent = params.get("org");
-    document.getElementById("timestamp").textContent = params.get("timestamp");
-</script>
-
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="currentYear"></span> Onen Sean Thomas Ongaya | WDD 231 | Kampala, Uganda</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
 </body>
 </html>
