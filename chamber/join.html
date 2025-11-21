@@ -2,12 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join the Chamber | Kampala Chamber of Commerce</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kampala Chamber of Commerce | Home</title>
 
-    <link rel="stylesheet" href="styles/chamber.css">
-    <script defer src="scripts/join.js"></script>
+    <meta name="description"
+        content="Kampala Chamber of Commerce - Connecting businesses, supporting growth, and strengthening our community." />
+    <meta name="author" content="Onen Sean Thomas Ongaya">
+
+    <link rel="icon" href="../favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Welcome to the Kampala Chamber of Commerce – Connect & Grow">
+    <meta property="og:description"
+        content="Join the Kampala Chamber of Commerce to connect with local businesses, access valuable resources, and grow your professional community in Uganda’s capital.">
+    <meta property="og:image" content="https://seanonen.github.io/wdd231/chamber/images/hero.jpg">
+    <meta property="og:url" content="https://seanonen.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="styles/chamber.css" />
+    <link rel="stylesheet" href="styles/join.css" />
+
+    <script src="scripts/chamber.js" defer></script>
 </head>
 
 <body>
@@ -50,15 +70,14 @@
 
                 <label>
                     Organizational Title
-                    <input type="text" name="title" autocomplete="organization-title"
-                           pattern="[A-Za-z\s\-]{7,}"
-                           title="Only letters, spaces, and hyphens — minimum 7 characters">
+                    <input type="text" name="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"
+                        title="Only letters, spaces, and hyphens — minimum 7 characters">
                 </label>
 
                 <label>
                     Email
-                    <input type="email" name="email" autocomplete="email" required
-                           placeholder="example@domain.com" title="Enter a valid email">
+                    <input type="email" name="email" autocomplete="email" required placeholder="example@domain.com"
+                        title="Enter a valid email">
                 </label>
 
                 <label>
@@ -69,7 +88,7 @@
                 <label>
                     Organization
                     <input type="text" name="org" autocomplete="organization" required
-                           title="Enter your organization name">
+                        title="Enter your organization name">
                 </label>
 
                 <label>
@@ -176,8 +195,12 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="currentYear"></span> Kampala Chamber of Commerce</p>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> Onen Sean Thomas Ongaya | WDD 231 | Kampala, Uganda</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
+
 </body>
 
 </html>
