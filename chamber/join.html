@@ -4,30 +4,52 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kampala Chamber of Commerce | Home</title>
+    <title>Kampala Chamber of Commerce | Join</title>
 
+    <!-- Meta Description -->
     <meta name="description"
-        content="Kampala Chamber of Commerce - Connecting businesses, supporting growth, and strengthening our community." />
+        content="Apply for membership with the Kampala Chamber of Commerce. Connect with businesses, access resources, and grow your network in Uganda's capital." />
+
+    <!-- Meta Author -->
     <meta name="author" content="Onen Sean Thomas Ongaya">
 
-    <link rel="icon" href="../favicon.ico" />
+    <!-- Favicon -->
+    <link rel="icon" href="../favicon.ico">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="Welcome to the Kampala Chamber of Commerce – Connect & Grow">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Join the Kampala Chamber of Commerce – Membership Application">
     <meta property="og:description"
-        content="Join the Kampala Chamber of Commerce to connect with local businesses, access valuable resources, and grow your professional community in Uganda’s capital.">
+        content="Become a member of the Kampala Chamber of Commerce and gain access to resources, networking opportunities, and business support.">
     <meta property="og:image" content="https://seanonen.github.io/wdd231/chamber/images/hero.jpg">
-    <meta property="og:url" content="https://seanonen.github.io/wdd231/chamber/index.html">
+    <meta property="og:url" content="https://seanonen.github.io/wdd231/chamber/join.html">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="styles/chamber.css" />
-    <link rel="stylesheet" href="styles/join.css" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/join.css">
 
+    <!-- JS -->
     <script src="scripts/chamber.js" defer></script>
+    <script defer>
+        // Timestamp Script
+        const tsField = document.getElementById("timestamp");
+        document.addEventListener("DOMContentLoaded", () => {
+            const now = new Date();
+            const formatted = now.toLocaleString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit"
+            });
+            tsField.value = formatted;
+        });
+    </script>
 </head>
 
 <body>
@@ -41,6 +63,7 @@
         </button>
     </header>
 
+    <!-- Navigation -->
     <nav class="navigation">
         <ul class="nav-list">
             <li><a href="../index.html">Home</a></li>
@@ -60,40 +83,40 @@
 
                 <label>
                     First Name
-                    <input type="text" name="fname" autocomplete="given-name" required title="Enter your first name">
+                    <input type="text" name="fname" autocomplete="given-name" required>
                 </label>
 
                 <label>
                     Last Name
-                    <input type="text" name="lname" autocomplete="family-name" required title="Enter your last name">
+                    <input type="text" name="lname" autocomplete="family-name" required>
                 </label>
 
+                <!-- Fixed Title Validation -->
                 <label>
                     Organizational Title
-                    <input type="text" name="title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"
-                        title="Only letters, spaces, and hyphens — minimum 7 characters">
+                    <input type="text" name="title"
+                        pattern="[A-Za-z\s\-]{7,}"
+                        title="Minimum 7 characters. Letters, spaces, and hyphens only.">
                 </label>
 
                 <label>
                     Email
-                    <input type="email" name="email" autocomplete="email" required placeholder="example@domain.com"
-                        title="Enter a valid email">
+                    <input type="email" name="email" autocomplete="email" required placeholder="example@domain.com">
                 </label>
 
                 <label>
                     Mobile Phone
-                    <input type="tel" name="phone" autocomplete="tel" required title="Enter your mobile number">
+                    <input type="tel" name="phone" autocomplete="tel" required>
                 </label>
 
                 <label>
                     Organization
-                    <input type="text" name="org" autocomplete="organization" required
-                        title="Enter your organization name">
+                    <input type="text" name="org" autocomplete="organization" required>
                 </label>
 
                 <label>
                     Membership Level
-                    <select name="membership" required title="Select membership level">
+                    <select name="membership" required>
                         <option value="">Select level...</option>
                         <option value="np">NP Membership (Non-Profit)</option>
                         <option value="bronze">Bronze Membership</option>
@@ -104,7 +127,7 @@
 
                 <label>
                     Business Description
-                    <textarea name="description" title="Organization description"></textarea>
+                    <textarea name="description"></textarea>
                 </label>
 
                 <input type="hidden" name="timestamp" id="timestamp">
@@ -116,7 +139,6 @@
 
         <!-- Membership Cards -->
         <section class="membership-cards">
-
             <div class="card fade-in" id="np-card">
                 <h3>NP Membership</h3>
                 <p>Perfect for non-profit organizations.</p>
@@ -140,7 +162,6 @@
                 <p>Premium benefits for top-tier members.</p>
                 <a href="#" data-modal="gold-modal">More Info</a>
             </div>
-
         </section>
 
         <!-- Modals -->
@@ -200,6 +221,12 @@
             <p id="lastModified"></p>
         </div>
     </footer>
+
+    <script>
+        // Footer Script
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = "Last Updated: " + document.lastModified;
+    </script>
 
 </body>
 
