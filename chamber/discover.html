@@ -1,104 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Discover — Kampala Chamber of Commerce</title>
-  <meta name="description" content="Discover vibrant places, cultural sites, and business resources in Kampala. Eight featured sights to explore." />
-  <meta name="author" content="Onen Sean Thomas Ongaya">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Discover — Kampala Chamber of Commerce</title>
+    <meta name="description"
+        content="Discover vibrant places, cultural sites, and business resources in Kampala. Eight featured sights to explore." />
+    <meta name="author" content="Onen Sean Thomas Ongaya">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Discover Kampala — Chamber Highlights">
-  <meta property="og:description" content="Explore eight hand-picked places in Kampala that showcase culture, business, and recreation.">
-  <meta property="og:image" content="https://seanonen.github.io/wdd231/chamber/images/discover-hero.webp">
-  <meta property="og:url" content="https://seanonen.github.io/wdd231/chamber/discover.html">
-  <meta property="og:type" content="website">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Discover Kampala — Kampacla Chamber Highlights">
+    <meta property="og:description"
+        content="Explore eight hand-picked places in Kampala that showcase culture, business, and recreation.">
+    <meta property="og:image" content="https://seanonen.github.io/wdd231/chamber/images/discover-hero.webp">
+    <meta property="og:url" content="https://seanonen.github.io/wdd231/chamber/discover.html">
+    <meta property="og:type" content="website">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles/chamber.css">
-  <link rel="stylesheet" href="styles/discover.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/discover.css">
 
-  <!-- Discover script (module) -->
-  <script type="module" src="scripts/discover.js" defer></script>
+    <!-- Discover script (module) -->
+    <script type="module" src="scripts/discover.js"></script>
 </head>
+
 <body>
-  <header>
-    <div class="logo-name">
-      <img src="images/logo.jpg" alt="Kampala Chamber of Commerce Logo">
-      <span class="site-title">Kampala Chamber of Commerce</span>
+    <header>
+        <div class="logo-name">
+            <img src="images/logo.jpg" alt="Kampala Chamber of Commerce Logo">
+            <span class="site-title">Kampala Chamber of Commerce</span>
+        </div>
+        <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <nav class="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+
+    <main class="discover-wrapper">
+
+        <!-- HERO -->
+        <section class="discover-hero" aria-label="Discover Kampala hero">
+            <img src="images/discover-hero.webp" alt="Kampala city skyline at sunrise">
+            <div class="hero-overlay">
+                <h1>Discover Kampala</h1>
+                <p>Explore markets, culture, innovation, and community experiences.</p>
+            </div>
+        </section>
+
+        <!-- VISIT MESSAGE -->
+        <div class="visit-area" role="region" aria-live="polite" aria-atomic="true">
+            <div id="visit-message">Loading visit message…</div>
+            <button id="visit-close" aria-label="Close visit message">✕</button>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="card">
+                <h3>Quick Facts</h3>
+                <p>Population (CBD): ~4.2M<br>Key industries: trade, services, tourism</p>
+            </div>
+
+            <div class="card mt-1">
+                <h3>Contact</h3>
+                <p>Kampala Chamber of Commerce</p>
+                <p><a href="mailto:info@kampalachamber.ug">info@kampalachamber.ug</a></p>
+            </div>
+        </aside>
+
+        <!-- DISCOVER GRID -->
+        <section id="discover-grid" aria-label="Featured places" class="grid"></section>
+    </main>
+
+    <!-- MODAL (hidden by default) -->
+    <div id="info-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content" role="document">
+            <button class="modal-close" aria-label="Close dialog">&times;</button>
+            <h2 id="modal-title">Loading…</h2>
+            <img id="modal-image" src="images/discover-hero.webp" alt="Modal image placeholder">
+            <address id="modal-address"></address>
+            <p id="modal-description"></p>
+        </div>
     </div>
-    <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
 
-  <nav class="navigation" aria-label="Main Navigation">
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="discover.html" class="active">Discover</a></li>
-      <li><a href="directory.html">Directory</a></li>
-      <li><a href="join.html">Join</a></li>
-    </ul>
-  </nav>
-
-  <main class="discover-wrapper">
-
-    <!-- HERO -->
-    <section class="discover-hero" aria-label="Discover Kampala hero">
-      <img src="images/discover-hero.webp" alt="Kampala city skyline at sunrise">
-      <div class="hero-overlay">
-        <h1>Discover Kampala</h1>
-        <p>Explore markets, culture, innovation, and community experiences.</p>
-      </div>
-    </section>
-
-    <!-- VISIT MESSAGE -->
-    <div class="visit-area" role="region" aria-live="polite" aria-atomic="true">
-      <div id="visit-message">Loading visit message…</div>
-      <button id="visit-close" aria-label="Close visit message">✕</button>
-    </div>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="card">
-        <h3>Quick Facts</h3>
-        <p>Population (Metro): ~4.2M<br>Key industries: trade, services, tourism</p>
-      </div>
-
-      <div class="card mt-1">
-        <h3>Contact</h3>
-        <p>Kampala Chamber of Commerce</p>
-        <p><a href="mailto:info@kampalachamber.ug">info@kampalachamber.ug</a></p>
-      </div>
-    </aside>
-
-    <!-- DISCOVER GRID -->
-    <section id="discover-grid" aria-label="Featured places" class="grid"></section>
-  </main>
-
-  <!-- MODAL (hidden by default) -->
-  <div id="info-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-content" role="document">
-      <button class="modal-close" aria-label="Close dialog">&times;</button>
-      <h2 id="modal-title"></h2>
-      <img id="modal-image" src="" alt="">
-      <address id="modal-address"></address>
-      <p id="modal-description"></p>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <p>&copy; <span id="currentYear"></span> Onen Sean Thomas Ongaya | WDD 231 | Kampala, Uganda</p>
-      <p id="lastModified"></p>
-    </div>
-  </footer>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> Onen Sean Thomas Ongaya | WDD 231 | Kampala, Uganda</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
 </body>
+
 </html>
