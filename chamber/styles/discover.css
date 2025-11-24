@@ -98,18 +98,54 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.card h2 { margin: 0 0 0.5rem 0; color: var(--primary-color); font-size: 1.15rem; }
-.card figure { margin: 0 0 0.5rem 0; overflow: hidden; border-radius: 6px; }
-.card img { width: 100%; height: 160px; object-fit: cover; display: block; transition: transform 0.4s ease, filter 0.4s ease; }
-.card address { font-style: normal; color: #444; font-size: 0.9rem; margin-bottom: 0.4rem; }
-.card p { margin: 0 0 0.6rem 0; color: var(--text-color); }
+.card h2 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.15rem;
+}
+
+.card figure {
+  margin: 0 0 0.5rem 0;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card address {
+  font-style: normal;
+  color: #444;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  margin: 0 0 0.6rem 0;
+  color: var(--text-color);
+}
 
 /* button */
-.learn-btn { background: var(--primary-color); color: #fff; border: none; padding: 0.5rem 0.75rem; border-radius: 6px; cursor: pointer; }
+.learn-btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
 /* hover image effect for medium+ */
 @media (min-width: 641px) {
-  .card img:hover { transform: scale(1.06) translateY(-4px); filter: brightness(0.95) contrast(1.02); }
+  .card img:hover {
+    transform: scale(1.06) translateY(-4px);
+    filter: brightness(0.95) contrast(1.02);
+  }
 }
 
 /* medium screens layout */
@@ -121,7 +157,9 @@
       "message message"
       "grid sidebar";
   }
-  #discover-grid { grid-template-columns: repeat(2, 1fr); }
+  #discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* large screens layout */
@@ -134,8 +172,13 @@
       "grid sidebar";
     gap: 1.5rem;
   }
-  #discover-grid { grid-template-columns: repeat(3, 1fr); }
-  .sidebar { position: sticky; top: 20px; }
+  #discover-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sidebar {
+    position: sticky;
+    top: 20px;
+  }
 }
 
 /* MODAL */
@@ -148,7 +191,10 @@
   align-items: center;
   z-index: 1000;
 }
-.modal[aria-hidden="false"] { display: flex; }
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
 
 .modal-content {
   background: #fff;
@@ -160,11 +206,34 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   animation: fadeIn 220ms ease;
 }
-.modal-close { position: absolute; top: 10px; right: 14px; font-size: 1.75rem; background: none; border: none; cursor: pointer; color: #444; }
-.modal-content img { width: 100%; border-radius: 8px; margin: 1rem 0; }
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 1.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #444;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
 
 /* keyframes */
-@keyframes fadeIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 /* disable hover effects for modal images on mobile */
-@media (max-width: 640px) { .modal-content img:hover { filter: none; transform: none; } }
+@media (max-width: 640px) {
+  .modal-content img:hover {
+    filter: none;
+    transform: none;
+  }
+}
