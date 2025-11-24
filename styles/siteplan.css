@@ -1,0 +1,52 @@
+/* Typography */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Lato:wght@300;400&display=swap");
+
+/* Global Styles */
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f4f9f4; /* Light green tint */
+  color: #1a2e1a;            /* Dark green */
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #2b7a2b; /* Primary green */
+  margin-top: 30px;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+}
+
+/* Color samples */
+.color-sample {
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Wireframe image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+/* Container boxes, optional */
+.section-box {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  margin-bottom: 20px;
+}
