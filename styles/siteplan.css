@@ -1,11 +1,24 @@
-/* Typography */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Lato:wght@300;400&display=swap");
+/* =========================
+   Root Variables
+   ========================= */
+:root {
+  /* Typography */
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Lato", sans-serif;
 
-/* Global Styles */
+  /* Color Scheme */
+  --color-primary: #2b7a2b;     /* Primary Green */
+  --color-bg: #f4f9f4;          /* Light Green Tint */
+  --color-text: #1a2e1a;        /* Dark Green */
+}
+
+/* =========================
+   Global Styling
+   ========================= */
 body {
-  font-family: "Lato", sans-serif;
-  background-color: #f4f9f4; /* Light green tint */
-  color: #1a2e1a;            /* Dark green */
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   margin: 0;
   padding: 20px;
   line-height: 1.6;
@@ -13,8 +26,8 @@ body {
 
 /* Headings */
 h1, h2, h3 {
-  font-family: "Montserrat", sans-serif;
-  color: #2b7a2b; /* Primary green */
+  font-family: var(--font-heading);
+  color: var(--color-primary);
   margin-top: 30px;
 }
 
@@ -33,7 +46,7 @@ ul {
   border: 1px solid #ccc;
 }
 
-/* Wireframe image styling */
+/* Wireframe images */
 img {
   max-width: 100%;
   height: auto;
@@ -42,7 +55,7 @@ img {
   margin-bottom: 20px;
 }
 
-/* Container boxes, optional */
+/* Section styling */
 .section-box {
   background: #ffffff;
   padding: 15px;
