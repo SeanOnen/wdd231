@@ -1,0 +1,249 @@
+/* discover.css - layout using grid-template-areas */
+:root {
+  --primary-color: #174a8c;
+  --text-color: #0a0a0a;
+  --card-bg: #ffffff;
+  --muted-bg: #fcfceb;
+}
+
+/* ===== IMPROVED HERO IMAGE ===== */
+.discover-hero {
+  grid-area: hero;
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.discover-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero Image*/
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.55)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.hero-overlay h1 {
+  font-size: 2rem;
+  color: #ffffff !important;
+  margin: 0;
+  font-weight: 700;
+}
+
+.hero-overlay p {
+  font-size: 1.05rem;
+  color: #ffffff !important;
+  margin-top: 0.3rem;
+  opacity: 0.95;
+}
+
+/* Larger hero on wider screens */
+@media (min-width: 768px) {
+  .discover-hero {
+    height: 360px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1.25rem;
+  }
+}
+
+/* PAGE GRID */
+.discover-wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hero"
+    "message"
+    "sidebar"
+    "grid";
+}
+
+/* MESSAGE AREA */
+.visit-area {
+  grid-area: message;
+  background: var(--muted-bg);
+  padding: 0.8rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* DISCOVER GRID */
+#discover-grid {
+  grid-area: grid;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+/* SIDEBAR */
+.sidebar {
+  grid-area: sidebar;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 0.8rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.15rem;
+}
+
+.card figure {
+  margin: 0 0 0.5rem 0;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.card address {
+  font-style: normal;
+  color: #444;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  margin: 0 0 0.6rem 0;
+  color: var(--text-color);
+}
+
+.learn-btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Hover effect for larger screens */
+@media (min-width: 641px) {
+  .card img:hover {
+    transform: scale(1.06) translateY(-4px);
+    filter: brightness(0.95) contrast(1.02);
+  }
+}
+
+/* MEDIUM SCREENS */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-wrapper {
+    grid-template-columns: 1fr 320px;
+    grid-template-areas:
+      "hero hero"
+      "message message"
+      "grid sidebar";
+  }
+
+  #discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* LARGE SCREENS */
+@media (min-width: 1025px) {
+  .discover-wrapper {
+    grid-template-columns: 1fr 420px;
+    grid-template-areas:
+      "hero sidebar"
+      "message sidebar"
+      "grid sidebar";
+    gap: 1.5rem;
+  }
+
+  #discover-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 20px;
+  }
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  padding: 1.75rem;
+  border-radius: 12px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #444;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Remove hover effects on mobile inside modals */
+@media (max-width: 640px) {
+  .modal-content img:hover {
+    filter: none;
+    transform: none;
+  }
+}
