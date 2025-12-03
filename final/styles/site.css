@@ -1,0 +1,92 @@
+/* Root variables */
+:root{
+  --font-heading: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-body: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --color-primary: #2b7a2b;
+  --color-bg: #f4f9f4;
+  --color-text: #1a2e1a;
+  --max-width: 1100px;
+  --gap: 1rem;
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  background:var(--color-bg);
+  color:var(--color-text);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+
+/* Header */
+.site-header{background:rgba(255,255,255,0.6);backdrop-filter:blur(4px);border-bottom:3px solid var(--color-primary)}
+.header-inner{display:flex;align-items:center;gap:1rem;justify-content:space-between}
+.brand{display:flex;align-items:center;text-decoration:none;color:inherit}
+.site-title{font-weight:700;margin-left:.5rem;font-family:var(--font-heading)}
+
+/* Nav */
+.main-nav{display:flex}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+.nav-list a{display:inline-block;padding:.5rem .6rem;text-decoration:none;border-radius:6px;color:inherit}
+.nav-list a:focus, .nav-list a:hover{outline:none;background:rgba(43,122,43,0.08)}
+.nav-list a.active{background:var(--color-primary);color:white}
+.nav-toggle{display:none;background:none;border:0;padding:.5rem}
+.hamburger{display:block;width:26px;height:2px;background:var(--color-text);position:relative}
+.hamburger::before,.hamburger::after{content:"";position:absolute;left:0;right:0;height:2px;background:var(--color-text)}
+.hamburger::before{top:-8px}
+.hamburger::after{bottom:-8px}
+
+/* Hero & sections */
+.hero{padding:2rem 0}
+.lede{max-width:60ch}
+.btn{background:var(--color-primary);color:#fff;padding:.6rem 1rem;border-radius:8px;text-decoration:none;display:inline-block}
+.btn.ghost{background:transparent;border:1px solid var(--color-primary);color:var(--color-primary)}
+
+/* Card / preview */
+.card{display:flex;gap:1rem;background:#fff;padding:1rem;border-radius:8px;border:1px solid #e3e3e3}
+.card img{width:160px;height:auto;object-fit:cover;border-radius:6px}
+
+/* Grid for systems */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem}
+.item-card{background:white;border:1px solid #e6e6e6;border-radius:8px;padding:1rem;display:flex;flex-direction:column;gap:.5rem;min-height:260px}
+.item-card img{width:100%;height:150px;object-fit:cover;border-radius:6px}
+.item-meta{font-size:.95rem;color:var(--color-text)}
+.controls{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;margin-top:.5rem}
+
+/* Modal (hidden by default) */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:1rem;background:rgba(0,0,0,0.45);z-index:60}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{background:#fff;border-radius:10px;max-width:720px;width:100%;padding:1rem;position:relative;outline:none}
+.modal-close{position:absolute;right:8px;top:8px;border:0;background:transparent;font-size:1.5rem}
+
+/* Form */
+label{display:block;margin-top:.75rem}
+input,textarea,select{width:100%;padding:.5rem;border-radius:6px;border:1px solid #ccc;margin-top:.25rem}
+
+/* Footer */
+.site-footer{margin-top:2rem;padding:1rem 0;background:transparent;border-top:2px solid var(--color-primary)}
+
+/* Accessible focus */
+a:focus, button:focus, input:focus, textarea:focus{outline:3px solid #ffd54f;outline-offset:3px}
+
+/* Mobile nav */
+@media (max-width:780px){
+  .main-nav{position:absolute;left:0;right:0;top:64px;background:var(--color-bg);display:none;padding:1rem;border-bottom:1px solid #ddd}
+  .main-nav[aria-hidden="false"]{display:block}
+  .nav-list{flex-direction:column}
+  .nav-toggle{display:block}
+  .header-inner{position:relative}
+}
+
+/* Desktop improvements */
+@media (min-width:781px){
+  .nav-toggle{display:none}
+}
+
+/* Ensure no horizontal scroll */
+html,body{overflow-x:hidden}

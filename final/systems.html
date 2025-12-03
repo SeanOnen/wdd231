@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Renewable Energy Hub — Systems</title>
+  <meta name="description" content="List of renewable energy systems for agriculture with specifications and examples." />
+  <meta name="author" content="Your Name" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Home">Renewable Energy Hub</a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation" aria-hidden="true">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="systems.html" class="active">Systems</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main" tabindex="-1">
+    <section class="controls" aria-label="Controls">
+      <label for="filter-type">Filter:
+        <select id="filter-type" name="filter-type">
+          <option value="all">All</option>
+          <option value="solar">Solar</option>
+          <option value="wind">Wind</option>
+          <option value="bioenergy">Bioenergy</option>
+        </select>
+      </label>
+
+      <label for="sort-by">Sort:
+        <select id="sort-by" name="sort-by">
+          <option value="name">Name</option>
+          <option value="power">Power (kW)</option>
+          <option value="cost">Cost (USD)</option>
+        </select>
+      </label>
+
+      <button id="clear-favs" class="btn ghost">Clear favorites</button>
+    </section>
+
+    <section aria-labelledby="systems-title">
+      <h1 id="systems-title">Energy Systems Directory</h1>
+      <p id="items-count" aria-live="polite"></p>
+
+      <!-- IMPORTANT: This container ID must match the JS selector -->
+      <div id="systems-container" class="grid" role="list"></div>
+    </section>
+  </main>
+
+  <!-- Accessible modal container (must exist) -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title"></div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year-systems"></span> Renewable Energy Hub — <a href="attributions.html">Attributions</a> — <a href="YOUR-VIDEO-LINK" target="_blank">Video Demonstration</a></p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS: use exact paths. Must be at end of body. -->
+  <script type="module" src="js/systems.js"></script>
+  <script>
+    // small nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const mainNav = document.getElementById('main-nav');
+    navToggle?.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      mainNav.setAttribute('aria-hidden', String(expanded));
+    });
+    document.getElementById('year-systems').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

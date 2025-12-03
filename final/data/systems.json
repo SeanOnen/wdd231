@@ -1,0 +1,4 @@
+[
+  {"id":1,"name":"Solar Irrigation A","type":"solar","power_kw":4,"location":"Small farm (east)","cost_usd":4500,"image":"images/solar.jpg","description":"PV array powering water pump for drip irrigation."},
+  {"id":2,"name":"Solar Irrigation B","type":"solar","power_kw":6,"location":"Medium farm (west)","cost_usd":6200,"image":"images/solar.jpg","description":"Larger array, battery optional for evening pumping."}
+]

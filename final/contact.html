@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Renewable Energy Hub — Contact</title>
+  <meta name="description" content="Contact Renewable Energy Hub — ask questions or request help evaluating a system for your farm." />
+  <meta name="author" content="Your Name" />
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="styles/site.css" />
+  <script type="module" src="scripts/thanks.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="images/favicon.ico" alt="" aria-hidden="true" width="36" height="36"><span class="site-title">Renewable Energy Hub</span></a>
+
+      <button id="nav-toggle-3" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation" aria-hidden="true">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="systems.html">Systems</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" tabindex="-1">
+    <section>
+      <h1>Contact & Request</h1>
+      <p>Complete the form below. The submission is shown on a thank-you page using URL search params.</p>
+
+      <form id="contact-form" action="thanks.html" method="GET" novalidate>
+        <label for="name">Name *</label>
+        <input id="name" name="name" type="text" required minlength="2">
+
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="farmSize">Farm size (ha)</label>
+        <input id="farmSize" name="farmSize" type="number" min="0" step="0.1">
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Send request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year-contact"></span> Renewable Energy Hub <a href="YOUR-VIDEO-LINK-HERE" target="_blank">Video Demonstration</a></p>
+    </div>
+  </footer>
+
+  <script type="module">
+    const navToggle = document.getElementById('nav-toggle-3');
+    const mainNav = document.getElementById('main-nav');
+    navToggle?.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      mainNav.setAttribute('aria-hidden', String(expanded));
+    });
+    document.getElementById('year-contact').textContent = new Date().getFullYear();
+    // small client validation UX
+    const form = document.getElementById('contact-form');
+    form?.addEventListener('submit', (e) => {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        form.reportValidity();
+      }
+    });
+  </script>
+</body>
+</html>
