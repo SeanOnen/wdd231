@@ -1,31 +1,22 @@
 // scripts/projects.js
 console.log("projects.js loaded");
-async function loadProjects() {
+
+export async function loadProjects() {
   console.log("Starting loadProjects...");
   const grid = document.getElementById('projects-grid');
-  if (!grid) { console.error("No grid found"); return; }
+  if (!grid) { 
+    console.error("No grid found"); 
+    return; 
+  }
+
   try {
     console.log("Fetching JSON...");
     const response = await fetch('data/renewable-projects.json');
     console.log("Response OK:", response.ok);
-    const projects = await response.json();
-    console.log("Projects loaded:", projects.length);
-    // ... rest of function
-  } catch (error) {
-    console.error("Full error:", error);
-    grid.innerHTML = `<p style="color:red; text-align:center;">Error: ${error.message}</p>`;
-  }
-}
-
-export async function loadProjects() {
-  const grid = document.getElementById('projects-grid');
-  if (!grid) return;
-
-  try {
-    const response = await fetch('data/renewable-projects.json');
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
     const projects = await response.json();
+    console.log("Projects loaded:", projects.length);
 
     // Save to localStorage for demo
     localStorage.setItem('cachedProjects', JSON.stringify(projects));
@@ -33,10 +24,8 @@ export async function loadProjects() {
 
     displayProjects(projects);
   } catch (error) {
-    console.error('Failed to load projects:', error);
-    grid.innerHTML = `<p style="color:red; grid-column:1/-1; text-align:center;">
-      Could not load projects. Please check your connection or JSON file path.
-    </p>`;
+    console.error("Full error:", error);
+    grid.innerHTML = `<p style="color:red; text-align:center; grid-column:1/-1;">Error: ${error.message}</p>`;
   }
 }
 
@@ -83,7 +72,7 @@ function openModal(project) {
 function setupFilters(allProjects) {
   document.querySelectorAll('.filters button').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelector('.filters button.active').classList.remove('active');
+      document.querySelector('.filters button.active')?.classList.remove('active');
       btn.classList.add('active');
 
       const filter = btn.dataset.filter;
