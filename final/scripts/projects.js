@@ -1,70 +1,50 @@
-// scripts/projects.js
-console.log("projects.js loaded");
-
 export async function loadProjects() {
-  console.log("Starting loadProjects...");
   const grid = document.getElementById('projects-grid');
-  if (!grid) { 
-    console.error("No grid found"); 
-    return; 
-  }
-
   try {
-    console.log("Fetching JSON...");
     const response = await fetch('data/renewable-projects.json');
-    console.log("Response OK:", response.ok);
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-
+    if (!response.ok) throw new Error('Network error');
     const projects = await response.json();
-    console.log("Projects loaded:", projects.length);
-
-    // Save to localStorage for demo
     localStorage.setItem('cachedProjects', JSON.stringify(projects));
     localStorage.setItem('lastVisit', new Date().toISOString());
-
     displayProjects(projects);
-  } catch (error) {
-    console.error("Full error:", error);
-    grid.innerHTML = `<p style="color:red; text-align:center; grid-column:1/-1;">Error: ${error.message}</p>`;
+  } catch (err) {
+    console.error(err);
+    grid.innerHTML = '<p style="color:red;text-align:center;">Sorry, projects could not be loaded.</p>';
   }
 }
 
 function displayProjects(projects) {
   const grid = document.getElementById('projects-grid');
   grid.innerHTML = '';
-
   projects.forEach(p => {
     const card = document.createElement('article');
     card.className = 'card';
     card.innerHTML = `
-      <img src="${p.image}" alt="${p.farm} ${p.type} renewable energy project" loading="lazy" width="400" height="300">
+      <img src="${p.image}" alt="${p.farm} ${p.type} installation" loading="lazy" width="400" height="300">
       <div class="card-body">
         <h3>${p.farm}</h3>
         <p><strong>${p.type}</strong> • ${p.capacity_kW} kW • ${p.state}</p>
         <p>Savings: <strong>${p.savings}</strong></p>
-        <button class="details-btn" data-id="${p.id}">View Details →</button>
       </div>
     `;
     card.addEventListener('click', () => openModal(p));
     grid.appendChild(card);
   });
-
   setupFilters(projects);
 }
 
 function openModal(project) {
   const modal = document.getElementById('modal');
   document.getElementById('modal-img').src = project.image;
-  document.getElementById('modal-img').alt = `${project.farm} ${project.type} installation`;
+  document.getElementById('modal-img').alt = `${project.farm} ${project.type}`;
   document.getElementById('modal-title').textContent = `${project.farm} – ${project.type}`;
   document.getElementById('modal-details').innerHTML = `
     <p><strong>Location:</strong> ${project.state}</p>
     <p><strong>Capacity:</strong> ${project.capacity_kW} kW</p>
-    <p><strong>Year Installed:</strong> ${project.year}</p>
-    <p><strong>Annual Savings:</strong> ${project.savings}</p>
+    <p><strong>Year:</strong> ${project.year}</p>
+    <p><strong>Savings:</strong> ${project.savings}</p>
     <p>${project.desc}</p>
   `;
-
   modal.setAttribute('aria-hidden', 'false');
   modal.querySelector('.close').focus();
 }
@@ -72,28 +52,17 @@ function openModal(project) {
 function setupFilters(allProjects) {
   document.querySelectorAll('.filters button').forEach(btn => {
     btn.addEventListener('click', () => {
-      document.querySelector('.filters button.active')?.classList.remove('active');
+      document.querySelector('.filters button.active').classList.remove('active');
       btn.classList.add('active');
-
       const filter = btn.dataset.filter;
-      const filtered = filter === 'all'
-        ? allProjects
-        : allProjects.filter(p => p.type === filter);
-
+      const filtered = filter === 'all' ? allProjects : allProjects.filter(p => p.type === filter);
       displayProjects(filtered);
     });
   });
 }
 
-// Close modal
+// Modal close
 document.addEventListener('click', e => {
-  const modal = document.getElementById('modal');
-  if (e.target === modal || e.target.classList.contains('close')) {
-    modal.setAttribute('aria-hidden', 'true');
-  }
+  if (e.target.classList.contains('modal') || e.target.classList.contains('close')) document.getElementById('modal').setAttribute('aria-hidden', 'true');
 });
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    document.getElementById('modal')?.setAttribute('aria-hidden', 'true');
-  }
-});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('modal')?.setAttribute('aria-hidden', 'true'); });

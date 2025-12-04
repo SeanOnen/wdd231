@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="15+ real renewable energy installations on farms – solar, wind, and biogas projects with savings data.">
-  <meta name="author" content="Onen Sean Thomas Ongaya">
+  <meta name="description" content="15+ real renewable energy installations on farms – solar, wind, and biogas projects with savings data.">
+  <meta name="author" content="Sean Thomas Ongaya">
   <meta property="og:title" content="Real Renewable Energy Projects on Farms">
   <meta property="og:description" content="See capacity, cost savings, and photos from working installations.">
-  <meta property="og:image" content="https://seanonen.github.io/wdd231/images/p1.jpg">
+  <meta property="og:image" content="https://seanonen.github.io/wdd231/final/images/p1.jpg">
   <title>Real Projects | Renewable Energy Hub</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Lato&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header>
     <div class="logo">Renewable Energy Hub</div>
     <nav>
-      <button class="hamburger" aria-label="Open menu">Menu</button>
+      <button class="hamburger" aria-label="Open menu">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="systems.html" class="active">Projects</a></li>
@@ -43,28 +40,25 @@
     </section>
 
     <section id="projects-grid" class="projects-grid">
-      <!-- Projects loaded by JavaScript -->
       <p>Loading projects...</p>
     </section>
   </main>
 
-  <!-- Accessible Modal -->
+  <!-- Modal -->
   <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal-content">
       <button class="close" aria-label="Close modal">×</button>
-      <img id="modal-img" alt="">
+      <img id="modal-img" alt="" loading="lazy">
       <h2 id="modal-title"></h2>
       <p id="modal-details"></p>
     </div>
   </div>
 
   <footer>
-    <p>&copy; <span id="year"></span> Onen Sean Thomas Ongaya • Renewable Energy Hub</p>
-    <p><a href="attributions.html">Attributions</a> • <a href="https://youtu.be/YOUR_VIDEO_LINK_HERE"
-        target="_blank">Video Demo</a></p>
+    <p>&copy; <span id="year"></span> Sean Thomas Ongaya • Renewable Energy Hub</p>
+    <p><a href="attributions.html">Attributions</a> • <a href="https://youtu.be/YOUR_VIDEO_LINK_HERE" target="_blank">Video Demo</a></p>
   </footer>
 
   <script type="module" src="scripts/main.js"></script>
 </body>
-
 </html>
