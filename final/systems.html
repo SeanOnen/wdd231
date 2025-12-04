@@ -1,85 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Renewable Energy Hub — Systems</title>
-  <meta name="description" content="List of renewable energy systems for agriculture with specifications and examples." />
-  <meta name="author" content="Your Name" />
-  <link rel="icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="styles/site.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="15+ real renewable energy installations on farms – solar, wind, and biogas projects with savings data.">
+  <meta name="author" content="Onen Sean Thomas Ongaya">
+  <meta property="og:title" content="Real Renewable Energy Projects on Farms">
+  <meta property="og:description" content="See capacity, cost savings, and photos from working installations.">
+  <meta property="og:image" content="https://seanonen.github.io/wdd231/images/p1.jpg">
+  <title>Real Projects | Renewable Energy Hub</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Lato&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Home">Renewable Energy Hub</a>
-
-      <button id="nav-toggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger" aria-hidden="true"></span>
-      </button>
-
-      <nav id="main-nav" class="main-nav" aria-label="Main navigation" aria-hidden="true">
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="systems.html" class="active">Systems</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <div class="logo">Renewable Energy Hub</div>
+    <nav>
+      <button class="hamburger" aria-label="Open menu">Menu</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="systems.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="container" id="main" tabindex="-1">
-    <section class="controls" aria-label="Controls">
-      <label for="filter-type">Filter:
-        <select id="filter-type" name="filter-type">
-          <option value="all">All</option>
-          <option value="solar">Solar</option>
-          <option value="wind">Wind</option>
-          <option value="bioenergy">Bioenergy</option>
-        </select>
-      </label>
+  <main>
+    <section class="page-header">
+      <h1>Real Renewable Energy Projects</h1>
+      <p>Click any card for full details</p>
 
-      <label for="sort-by">Sort:
-        <select id="sort-by" name="sort-by">
-          <option value="name">Name</option>
-          <option value="power">Power (kW)</option>
-          <option value="cost">Cost (USD)</option>
-        </select>
-      </label>
-
-      <button id="clear-favs" class="btn ghost">Clear favorites</button>
+      <div class="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="Solar">Solar</button>
+        <button data-filter="Wind">Wind</button>
+        <button data-filter="Bioenergy">Bioenergy</button>
+      </div>
     </section>
 
-    <section aria-labelledby="systems-title">
-      <h1 id="systems-title">Energy Systems Directory</h1>
-      <p id="items-count" aria-live="polite"></p>
-
-      <!-- IMPORTANT: This container ID must match the JS selector -->
-      <div id="systems-container" class="grid" role="list"></div>
+    <section id="projects-grid" class="projects-grid">
+      <!-- Projects loaded by JavaScript -->
+      <p>Loading projects...</p>
     </section>
   </main>
 
-  <!-- Accessible modal container (must exist) -->
-  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title"></div>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year-systems"></span> Renewable Energy Hub — <a href="attributions.html">Attributions</a> — <a href="YOUR-VIDEO-LINK" target="_blank">Video Demonstration</a></p>
+  <!-- Accessible Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button class="close" aria-label="Close modal">×</button>
+      <img id="modal-img" alt="">
+      <h2 id="modal-title"></h2>
+      <p id="modal-details"></p>
     </div>
+  </div>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Onen Sean Thomas Ongaya • Renewable Energy Hub</p>
+    <p><a href="attributions.html">Attributions</a> • <a href="https://youtu.be/YOUR_VIDEO_LINK_HERE"
+        target="_blank">Video Demo</a></p>
   </footer>
 
-  <!-- SCRIPTS: use exact paths. Must be at end of body. -->
-  <script type="module" src="js/systems.js"></script>
-  <script>
-    // small nav toggle
-    const navToggle = document.getElementById('nav-toggle');
-    const mainNav = document.getElementById('main-nav');
-    navToggle?.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      mainNav.setAttribute('aria-hidden', String(expanded));
-    });
-    document.getElementById('year-systems').textContent = new Date().getFullYear();
-  </script>
+  <script type="module" src="scripts/main.js"></script>
 </body>
+
 </html>

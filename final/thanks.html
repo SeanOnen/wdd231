@@ -1,21 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Form Submitted — Renewable Energy Hub</title>
-  <meta name="description" content="Form submission results." />
-  <meta name="author" content="Your Name" />
-  <link rel="icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="styles/site.css" />
-  <script type="module" src="scripts/thanks.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Renewable Energy Hub</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-  <main class="container">
-    <h1>Thank you — form submitted</h1>
-    <p>The values you submitted are shown below (from the URL query string):</p>
-    <pre id="form-results" aria-live="polite">Loading...</pre>
-    <p><a href="index.html">Return home</a></p>
-  </main>
+<body class="thanks">
+  <h1>Thank You!</h1>
+  <div id="results"></div>
+  <p><a href="index.html">← Back Home</a></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const results = document.getElementById('results');
+    results.innerHTML = `
+      <p><strong>Name:</strong> ${params.get('name') || 'Not provided'}</p>
+      <p><strong>Email:</strong> ${params.get('email') || 'Not provided'}</p>
+      <p><strong>Farm Size:</strong> ${params.get('acres') ? params.get('acres') + ' acres' : 'Not provided'}</p>
+      <p><strong>Interests:</strong> ${params.getAll('interest').join(', ') || 'None selected'}</p>
+    `;
+  </script>
 </body>
 </html>

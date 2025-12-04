@@ -1,88 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Renewable Energy Hub — Home</title>
-  <meta name="description" content="Renewable Energy Hub: practical guides and systems for integrating solar, wind and bioenergy on farms." />
-  <meta name="author" content="Your Name" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Renewable Energy Hub — Home" />
-  <meta property="og:description" content="Guides, examples and tools for renewable energy systems in agriculture." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="images/og-image.png" />
-  <link rel="icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="styles/site.css" />
-  <script type="module" src="scripts/render.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how solar, wind, and bioenergy power modern sustainable agriculture. Real farm examples and savings data.">
+  <meta name="author" content="Onen Sean Thomas Ongaya">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Renewable Energy Hub">
+  <meta property="og:description" content="Discover renewable energy solutions for today's farms.">
+  <meta property="og:image" content="https://seanonen.github.io/wdd231/images/hero.jpg">
+  <meta property="og:url" content="https://seanonen.github.io/wdd231/">
+
+  <title>Renewable Energy Hub | Sustainable Farming Solutions</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Renewable Energy Hub home">
-        <img src="images/favicon.ico" alt="" aria-hidden="true" width="36" height="36">
-        <span class="site-title">Renewable Energy Hub</span>
-      </a>
-
-      <button id="nav-toggle" class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger" aria-hidden="true"></span>
-      </button>
-
-      <nav id="main-nav" class="main-nav" aria-label="Main navigation" aria-hidden="true">
-        <ul class="nav-list">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="systems.html">Systems</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="thanks.html">Form test</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <div class="logo">Renewable Energy Hub</div>
+    <nav>
+      <button class="hamburger" aria-label="Open menu">Menu</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="systems.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main id="main" class="container" tabindex="-1">
-    <section class="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title">Renewable Energy Systems in Agriculture</h1>
-      <p class="lede">Practical guides, case studies and system specs to help farms adopt solar, wind and bioenergy solutions.</p>
-      <p>
-        <a class="btn" href="systems.html">Explore Systems</a>
-        <a class="btn ghost" href="contact.html">Request a Review</a>
-      </p>
+  <main>
+    <section class="hero">
+      <h1>Powering Tomorrow's Farms Today</h1>
+      <p>Real renewable energy projects saving farmers thousands every year</p>
     </section>
 
-    <section class="overview" aria-labelledby="overview-title">
-      <h2 id="overview-title">Why renewable energy for farms?</h2>
-      <p>Renewables reduce operating costs, increase resilience and lower emissions. This site shows real examples, data-driven comparisons and implementation tips.</p>
+    <section class="intro">
+      <h2>Welcome</h2>
+      <p>Explore solar, wind, and bioenergy systems already working on farms across the country. See real data, costs, and savings.</p>
+      <a href="systems.html" class="btn">View Real Projects →</a>
     </section>
 
-    <section class="preview" aria-labelledby="preview-title">
-      <h2 id="preview-title">Featured system</h2>
-      <article class="card">
-        <img src="images/solar.jpg" alt="Solar panels on barn roof" loading="lazy" width="800" height="450">
-        <div class="card-body">
-          <h3>Solar irrigation example</h3>
-          <p>PV array powering a pump for drip irrigation — low maintenance and low running cost.</p>
-        </div>
-      </article>
-    </section>
+    <section id="last-visit"></section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <p>© <span id="year-home"></span> Renewable Energy Hub — <a href="YOUR-VIDEO-LINK-HERE" target="_blank">Video Demonstration</a> — <a href="data/systems.json">Sample data</a></p>
-    
-    </div>
+  <footer>
+    <p>&copy; <span id="year"></span> Onen Sean Thomas Ongaya • Renewable Energy Hub</p>
+    <p>
+      <a href="attributions.html">Attributions</a> • 
+      <a href="https://youtu.be/YOUR_VIDEO_LINK_HERE" target="_blank">Video Demo</a>
+    </p>
   </footer>
 
-  <script type="module">
-    // small nav toggle that works site-wide
-    const navToggle = document.getElementById('nav-toggle');
-    const mainNav = document.getElementById('main-nav');
-    navToggle?.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      mainNav.setAttribute('aria-hidden', String(expanded));
-    });
-    // set year
-    document.getElementById('year-home').textContent = new Date().getFullYear();
-  </script>
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
