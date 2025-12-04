@@ -18,7 +18,7 @@
         "capacity_kW": 800,
         "year": 2022,
         "savings": "$92,000/yr",
-        "image": "final/images/p2.jpg",
+        "image": "images/p2.jpg",
         "desc": "Two 400 kW turbines"
     },
     {
@@ -29,7 +29,7 @@
         "capacity_kW": 1200,
         "year": 2024,
         "savings": "$180,000/yr",
-        "image": "final/images/p3.jpg",
+        "image": "images/p3.jpg",
         "desc": "Ground-mount solar with tracking"
     },
     {
@@ -40,7 +40,7 @@
         "capacity_kW": 200,
         "year": 2021,
         "savings": "$45,000/yr",
-        "image": "final/images/p4.jpg",
+        "image": "images/p4.jpg",
         "desc": "Anaerobic digester from dairy manure"
     },
     {
@@ -51,7 +51,7 @@
         "capacity_kW": 500,
         "year": 2023,
         "savings": "$72,000/yr",
-        "image": "final/images/p5.jpg",
+        "image": "images/p5.jpg",
         "desc": "Community solar garden"
     },
     {
@@ -62,7 +62,7 @@
         "capacity_kW": 1500,
         "year": 2023,
         "savings": "$210,000/yr",
-        "image": "final/images/p6.jpg",
+        "image": "images/p6.jpg",
         "desc": "Single large turbine"
     },
     {
@@ -73,7 +73,7 @@
         "capacity_kW": 150,
         "year": 2022,
         "savings": "$38,000/yr",
-        "image": "final/images/p7.jpg",
+        "image": "images/p7.jpg",
         "desc": "Poultry litter digester"
     },
     {
@@ -84,7 +84,7 @@
         "capacity_kW": 600,
         "year": 2024,
         "savings": "$89,000/yr",
-        "image": "final/images/p8.jpg",
+        "image": "images/p8.jpg",
         "desc": "Solar over parking and pumps"
     },
     {
@@ -95,7 +95,7 @@
         "capacity_kW": 300,
         "year": 2023,
         "savings": "$67,000/yr",
-        "image": "final/images/p9.jpg",
+        "image": "images/p9.jpg",
         "desc": "Manure + food waste co-digestion"
     },
     {
@@ -106,7 +106,7 @@
         "capacity_kW": 900,
         "year": 2023,
         "savings": "$135,000/yr",
-        "image": "final/images/p10.jpg",
+        "image": "images/p10.jpg",
         "desc": "Pivot irrigation powered 100% solar"
     },
     {
@@ -117,7 +117,7 @@
         "capacity_kW": 180,
         "year": 2024,
         "savings": "$31,000/yr",
-        "image": "final/images/p11.jpg",
+        "image": "images/p11.jpg",
         "desc": "Off-grid winery"
     },
     {
@@ -128,7 +128,7 @@
         "capacity_kW": 750,
         "year": 2022,
         "savings": "$110,000/yr",
-        "image": "final/images/p12.jpg",
+        "image": "images/p12.jpg",
         "desc": "Desert solar + battery"
     },
     {
@@ -139,7 +139,7 @@
         "capacity_kW": 600,
         "year": 2023,
         "savings": "$78,000/yr",
-        "image": "final/images/p13.jpg",
+        "image": "images/p13.jpg",
         "desc": "Small coastal wind project"
     },
     {
@@ -150,7 +150,7 @@
         "capacity_kW": 250,
         "year": 2024,
         "savings": "$55,000/yr",
-        "image": "final/images/p14.jpg",
+        "image": "images/p14.jpg",
         "desc": "Swine manure digester"
     },
     {
@@ -161,7 +161,7 @@
         "capacity_kW": 2000,
         "year": 2024,
         "savings": "$320,000/yr",
-        "image": "final/images/p15.jpg",
+        "image": "images/p15.jpg",
         "desc": "One of California's largest on-farm solar arrays"
     },
     {
@@ -172,7 +172,7 @@
         "capacity_kW": 400,
         "year": 2023,
         "savings": "$64,000/yr",
-        "image": "final/images/p16.jpg",
+        "image": "images/p16.jpg",
         "desc": "Remote pasture pumping"
     },
     {
@@ -183,7 +183,7 @@
         "capacity_kW": 180,
         "year": 2022,
         "savings": "$42,000/yr",
-        "image": "final/images/p17.jpg",
+        "image": "images/p17.jpg",
         "desc": "Cotton gin waste to energy"
     },
     {
@@ -194,7 +194,7 @@
         "capacity_kW": 520,
         "year": 2024,
         "savings": "$76,000/yr",
-        "image": "final/images/p18.jpg",
+        "image": "images/p18.jpg",
         "desc": "Greenhouse heating assistance"
     },
     {
@@ -205,7 +205,7 @@
         "capacity_kW": 1000,
         "year": 2023,
         "savings": "$140,000/yr",
-        "image": "final/images/p19.jpg",
+        "image": "images/p19.jpg",
         "desc": "Ranch-scale wind"
     },
     {
@@ -216,7 +216,7 @@
         "capacity_kW": 1100,
         "year": 2024,
         "savings": "$165,000/yr",
-        "image": "final/images/p20.jpg",
+        "image": "images/p20.jpg",
         "desc": "Flooded rice field solar"
     }
 ]

@@ -1,4 +1,22 @@
 // scripts/projects.js
+console.log("projects.js loaded");
+async function loadProjects() {
+  console.log("Starting loadProjects...");
+  const grid = document.getElementById('projects-grid');
+  if (!grid) { console.error("No grid found"); return; }
+  try {
+    console.log("Fetching JSON...");
+    const response = await fetch('data/renewable-projects.json');
+    console.log("Response OK:", response.ok);
+    const projects = await response.json();
+    console.log("Projects loaded:", projects.length);
+    // ... rest of function
+  } catch (error) {
+    console.error("Full error:", error);
+    grid.innerHTML = `<p style="color:red; text-align:center;">Error: ${error.message}</p>`;
+  }
+}
+
 export async function loadProjects() {
   const grid = document.getElementById('projects-grid');
   if (!grid) return;
