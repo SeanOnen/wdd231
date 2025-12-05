@@ -32,7 +32,12 @@
 
 <body>
   <header>
-    <div class="logo">Renewable Energy Hub</div>
+    <div class="logo">
+      <a href="index.html" aria-label="Home">
+        <img src="images/logo.jpg" alt="Renewable Energy Hub Logo" id="site-logo">
+        <span>Renewable Energy Hub</span>
+      </a>
+    </div>
     <nav>
       <button class="hamburger" aria-label="Open menu">☰</button>
       <ul class="nav-links">
@@ -73,8 +78,11 @@
 
   <footer>
     <p>&copy; <span id="year"></span> Sean Thomas Ongaya • Renewable Energy Hub</p>
-    <p><a href="attributions.html">Attributions</a> • <a href="https://youtu.be/YOUR_VIDEO_LINK_HERE"
-        target="_blank">Video Demo</a></p>
+    <p>
+      <a href="attributions.html">Attributions</a> •
+      <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">Video Demonstration</a>
+    </p>
+    <p id="last-modified">Last Modified: Loading...</p>
   </footer>
 
   <script type="module" src="scripts/main.js"></script>

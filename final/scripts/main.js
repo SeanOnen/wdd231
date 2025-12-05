@@ -17,3 +17,17 @@ if (lastVisit && document.getElementById('last-visit')) {
 
 // Load projects on systems page
 if (document.getElementById('projects-grid')) loadProjects();
+
+// Auto-update "Last Modified" timestamp using the current date/time of the visitor's browser
+document.addEventListener('DOMContentLoaded', () => {
+  const lastMod = document.getElementById('last-modified');
+  if (lastMod) {
+    const now = new Date();
+    lastMod.textContent = `Last Modified: ${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;
+  }
+
+  // Also update the copyright year (if you don't already have it)
+  document.querySelectorAll('#year').forEach(el => {
+    el.textContent = now.getFullYear();
+  });
+});

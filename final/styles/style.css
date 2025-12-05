@@ -17,53 +17,205 @@
 /* =========================
    Reset & Base
    ========================= */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-dark); line-height: 1.6; }
-h1, h2, h3 { font-family: var(--font-heading); color: var(--color-primary); }
-a { color: var(--color-primary); text-decoration: none; }
-.btn { display: inline-block; background: var(--color-primary); color: white; padding: 12px 24px; border-radius: 6px; margin-top: 1rem; }
-.btn:hover { background: var(--color-accent); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--color-primary);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: var(--color-accent);
+}
 
 /* =========================
    Header
    ========================= */
-header { background: var(--color-primary); color: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 1.5rem; font-weight: bold; }
-nav ul { list-style: none; display: flex; gap: 2rem; }
-nav a { color: white; }
-nav a.active, nav a:hover { text-decoration: underline; }
-.hamburger { display: none; background: none; border: none; font-size: 2rem; color: white; cursor: pointer; }
+header {
+  background: var(--color-primary);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+}
+
+nav a.active,
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
 
 /* =========================
    Hero
    ========================= */
-.hero { 
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.65)), url('../images/hero.jpg') center/cover no-repeat;
-  color: white; text-align: center; padding: 6rem 1rem; text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.65)), url('../images/hero.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
-.hero h1 { color: white; font-size: 2.8rem; margin-bottom: 0.5rem; }
+
+.hero h1 {
+  color: white;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
 
 /* =========================
    Main
    ========================= */
-main { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
-.intro { text-align: center; padding: 4rem 1rem; background: var(--color-light); border-radius: 10px; margin: 2rem 0; }
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.intro {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: var(--color-light);
+  border-radius: 10px;
+  margin: 2rem 0;
+}
 
 /* Projects */
-.projects-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-.card { background: var(--color-light); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s; }
-.card:hover { transform: translateY(-8px); }
-.card img { width: 100%; height: 200px; object-fit: cover; loading: lazy; }
-.card-body { padding: 1.5rem; }
-.filters { text-align: center; margin: 2rem 0; }
-.filters button { margin: 0.5rem; padding: 0.8rem 1.2rem; border: none; background: #ddd; border-radius: 4px; cursor: pointer; }
-.filters button.active, .filters button:hover { background: var(--color-primary); color: white; }
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+  background: var(--color-light);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  loading: lazy;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.filters {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.filters button {
+  margin: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  background: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters button.active,
+.filters button:hover {
+  background: var(--color-primary);
+  color: white;
+}
 
 /* Modal */
-.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); align-items: center; justify-content: center; }
-.modal[aria-hidden="false"] { display: flex; }
-.modal-content { background: var(--color-light); max-width: 500px; width: 100%; border-radius: 8px; padding: 2rem; position: relative; max-height: 90vh; overflow-y: auto; }
-.close { position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 2.5rem; cursor: pointer; }
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--color-light);
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
 /* Modal Image Resize */
 .modal img {
   max-width: 500px;
@@ -73,23 +225,66 @@ main { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
   display: block;
   margin: 0 auto 1rem;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Form */
-.form-page { max-width: 600px; margin: 3rem auto; background: var(--color-light); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-label, fieldset { display: block; margin: 1.5rem 0; }
-input { width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; }
+.form-page {
+  max-width: 600px;
+  margin: 3rem auto;
+  background: var(--color-light);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+label,
+fieldset {
+  display: block;
+  margin: 1.5rem 0;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
 /* Footer */
-footer { background: var(--color-primary); color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
-footer a { color: white; text-decoration: underline; }
+footer {
+  background: var(--color-primary);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}
 
 /* Mobile */
 @media (max-width: 767px) {
-  .hamburger { display: block; }
-  .nav-links { display: none; flex-direction: column; background: var(--color-accent); position: absolute; top: 100%; left: 0; right: 0; padding: 1rem; }
-  .nav-links.active { display: flex; }
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--color-accent);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
 }
 
 /* ——— Contact Page Checkbox Alignment ——— */
@@ -111,5 +306,30 @@ footer a { color: white; text-decoration: underline; }
 .checkbox-group input[type="checkbox"] {
   width: 1.3rem;
   height: 1.3rem;
-  accent-color: var(--color-primary);   /* makes the checkbox green */
+  accent-color: var(--color-primary);
+  /* makes the checkbox green */
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Site Logo in Header */
+#site-logo {
+  height: 80px;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.logo span {
+  font-weight: bold;
+  font-size: 1.4rem;
 }

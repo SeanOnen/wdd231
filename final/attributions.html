@@ -29,10 +29,16 @@
   <!-- CSS -->
   <link rel="stylesheet" href="styles/style.css">
 </head>
+<script type="module" src="scripts/main.js"></script>
 
 <body>
   <header>
-    <div class="logo">Renewable Energy Hub</div>
+    <div class="logo">
+      <a href="index.html" aria-label="Home">
+        <img src="images/logo.jpg" alt="Renewable Energy Hub Logo" id="site-logo">
+        <span>Renewable Energy Hub</span>
+      </a>
+    </div>
   </header>
 
   <main>
@@ -46,7 +52,12 @@
   </main>
 
   <footer>
-    <p>© 2025 Sean Thomas Ongaya • Renewable Energy Hub</p>
+    <p>&copy; <span id="year"></span> Sean Thomas Ongaya • Renewable Energy Hub</p>
+    <p>
+      <a href="attributions.html">Attributions</a> •
+      <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">Video Demonstration</a>
+    </p>
+    <p id="last-modified">Last Modified: Loading...</p>
   </footer>
 </body>
 
