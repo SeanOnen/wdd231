@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lastMod.textContent = `Last Modified: ${now.toLocaleDateString()} ${now.toLocaleTimeString()}`;
   }
 
-  // Also update the copyright year (if you don't already have it)
+
   document.querySelectorAll('#year').forEach(el => {
     el.textContent = now.getFullYear();
   });

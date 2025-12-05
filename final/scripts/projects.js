@@ -1,5 +1,3 @@
-// scripts/projects.js
-
 export async function loadProjects() {
   const grid = document.getElementById('projects-grid');
   if (!grid) return;
@@ -10,12 +8,11 @@ export async function loadProjects() {
 
     const projects = await response.json();
 
-    // Save to localStorage
     localStorage.setItem('cachedProjects', JSON.stringify(projects));
     localStorage.setItem('lastVisit', new Date().toISOString());
 
     displayProjects(projects);
-    setupFilters(projects);  // Call once only, after initial load
+    setupFilters(projects);
   } catch (error) {
     console.error('Failed to load projects:', error);
     grid.innerHTML = `<p style="color:red; grid-column:1/-1; text-align:center;">Could not load projects. Please check your connection or JSON file path.</p>`;
@@ -41,7 +38,7 @@ function displayProjects(projects) {
     card.addEventListener('click', () => openModal(p));
     grid.appendChild(card);
   });
-  // Removed setupFilters from here to prevent duplicates
+
 }
 
 function openModal(project) {
@@ -62,7 +59,7 @@ function openModal(project) {
 }
 
 function setupFilters(allProjects) {
-  // Clear any existing listeners first (prevents duplicates)
+
   document.querySelectorAll('.filters button').forEach(btn => btn.replaceWith(btn.cloneNode(true)));
 
   document.querySelectorAll('.filters button').forEach(btn => {
@@ -77,7 +74,7 @@ function setupFilters(allProjects) {
   });
 }
 
-// Close modal
+
 document.addEventListener('click', e => {
   const modal = document.getElementById('modal');
   if (e.target === modal || e.target.classList.contains('close')) {
