@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Get a free renewable energy assessment for your farm.">
+  <meta name="description"
+    content="Renewable Energy Hub – Real solar, wind and bioenergy projects on farms across the United States.">
   <meta name="author" content="Sean Thomas Ongaya">
-  <title>Contact | Renewable Energy Hub</title>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Renewable Energy Hub">
+  <meta property="og:description"
+    content="Discover real renewable energy installations on farms – solar, wind, and bioenergy projects with savings data.">
+  <meta property="og:image" content="https://seanonen.github.io/wdd231/final/images/hero.jpg">
+  <meta property="og:url" content="https://seanonen.github.io/wdd231/final/">
+
+  <!-- Page title -->
+  <title>Renewable Energy Hub | Contact</title>
+
+  <!-- Favicon -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts + Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Lato&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
   <header>
     <div class="logo">Renewable Energy Hub</div>
@@ -30,9 +51,11 @@
       <label>Farm Size (acres) <input type="number" name="acres" min="1"></label>
       <fieldset>
         <legend>Interested In (check all that apply)</legend>
-        <label><input type="checkbox" name="interest" value="solar"> Solar</label>
-        <label><input type="checkbox" name="interest" value="wind"> Wind</label>
-        <label><input type="checkbox" name="interest" value="bioenergy"> Bioenergy</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="interest" value="solar"> Solar</label>
+          <label><input type="checkbox" name="interest" value="wind"> Wind</label>
+          <label><input type="checkbox" name="interest" value="bioenergy"> Bioenergy</label>
+        </div>
       </fieldset>
       <button type="submit" class="btn">Submit →</button>
     </form>
@@ -40,8 +63,10 @@
 
   <footer>
     <p>&copy; <span id="year"></span> Sean Thomas Ongaya • Renewable Energy Hub</p>
-    <p><a href="attributions.html">Attributions</a> • <a href="https://youtu.be/YOUR_VIDEO_LINK_HERE" target="_blank">Video Demo</a></p>
+    <p><a href="attributions.html">Attributions</a> • <a href="https://youtu.be/YOUR_VIDEO_LINK_HERE"
+        target="_blank">Video Demo</a></p>
   </footer>
   <script src="scripts/main.js"></script>
 </body>
+
 </html>

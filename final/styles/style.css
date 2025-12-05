@@ -60,10 +60,21 @@ main { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
 .filters button.active, .filters button:hover { background: var(--color-primary); color: white; }
 
 /* Modal */
-.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); align-items: center; justify-content: center; }
 .modal[aria-hidden="false"] { display: flex; }
 .modal-content { background: var(--color-light); max-width: 500px; width: 100%; border-radius: 8px; padding: 2rem; position: relative; max-height: 90vh; overflow-y: auto; }
 .close { position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 2.5rem; cursor: pointer; }
+/* Modal Image Resize */
+.modal img {
+  max-width: 500px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 
 /* Form */
 .form-page { max-width: 600px; margin: 3rem auto; background: var(--color-light); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
@@ -79,4 +90,26 @@ footer a { color: white; text-decoration: underline; }
   .hamburger { display: block; }
   .nav-links { display: none; flex-direction: column; background: var(--color-accent); position: absolute; top: 100%; left: 0; right: 0; padding: 1rem; }
   .nav-links.active { display: flex; }
+}
+
+/* ——— Contact Page Checkbox Alignment ——— */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 1.3rem;
+  height: 1.3rem;
+  accent-color: var(--color-primary);   /* makes the checkbox green */
 }
